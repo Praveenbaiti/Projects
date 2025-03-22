@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Logo Styling */
+.logo {
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.logo:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Navigation Styling */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+}
+
+.nav h1 {
+    font-size: 24px;
+}
+
+.nav h3 {
+    margin: 0 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav h3:hover {
+    color: #f39c12;
+}
+
+/* Movie Section */
+.movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Individual Movie Styling */
+.movies figure {
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.movies figure img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border: 2px solid yellow;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.movies figure:hover {
+    transform: scale(1.05);
+}
+
+/* Movie Title Styling */
+.movies figure h4 {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+.footer{
+    color: brown;
+    font-size: 100px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .movies {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
